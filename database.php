@@ -15,10 +15,10 @@ if ($os) {
 $settings = array(
     'driver' => 'mysql',
     'host' => $os ? $url["host"] : 'localhost',
-    'port' => $os ? $url["port"] : 3306,
+    'port' => $os ? $url["port"] : 8889,
     'database' => $os ? substr($url["path"], 1) : 'biblioteca',
     'username' => $os ? $url["user"] : 'root',
-    'password' => $os ? $url["pass"] : '',
+    'password' => $os ? $url["pass"] : 'root',
     'charset'   => 'utf8',
     'collation' => 'utf8_spanish_ci',
     'prefix' => ''
