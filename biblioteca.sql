@@ -106,3 +106,30 @@ INSERT INTO `videogames` (`name`, `description`, `gamePlatform`, `applicationSub
 ('Assassin''s Creed: Unity', 'Assassin''s Creed: Unity es un videojuego de ficción histórica desarrollado por Ubisoft. Es la séptima entrega de la saga Assassin''s Creed y su temática gira en torno a la Revolución Francesa, en el siglo XVIII. El juego fue lanzado en Norteamérica el 11 de noviembre del 2014 y en Europa el 13 de noviembre de 2014.', 'PS4', 'Acción-aventura(parkour) y sigilo', 'https://drh1.img.digitalriver.com/DRHM/Storefront/Company/ubi/images/hero/ubi/ACU_hero.jpg', 'https://www.youtube.com/embed/NVE2FxMWxeg', '2014-11-13'),
 ('League of Legends', 'League of Legends, también conocido por sus siglas LoL, es un videojuego de género multiplayer online battle arena (MOBA). El juego está inspirado en el popular mapa personalizado del Warcraft III, Defense of the Ancients: Allstars (abreviado normalmente con las siglas DotA) diseñado por Steve «Guinsoo» Feak y Steve «Pendragon» Mescon.', 'PC', 'Campo De Batalla Multijugador En Línea', 'http://www.funandseriousgamefestival.com/imagenes/league-of-legends-g.jpg', 'https://www.youtube.com/embed/ZqilPmPw2yc', '2009-10-27');
 
+--
+-- Estructura de tabla para la tabla `tvshows`
+--
+
+CREATE TABLE IF NOT EXISTS `tvseries` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` TEXT COLLATE utf8_spanish_ci NOT NULL,
+  `description` TEXT COLLATE utf8_spanish_ci NOT NULL,
+  `director` TEXT COLLATE utf8_spanish_ci NOT NULL,
+  `embedUrl` TEXT COLLATE utf8_spanish_ci NOT NULL,
+  `datePublished` date NOT NULL,
+  `productionCompany` TEXT COLLATE utf8_spanish_ci NOT NULL,
+  `numberOfSeasons` int(2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `movies`
+--
+
+INSERT INTO `tvseries` (`name`, `description`, `director`, `embedUrl`, `datePublished`, `productionCompany`, `numberOfSeasons`) VALUES
+('La casa de papel', 'Ocho atracadores toman rehenes en la Fábrica Nacional de Moneda y Timbre española. Desde el encierro, su líder manipula a la policía para llevar a cabo un ambicioso plan.', 'Álex Pina', 'https://www.netflix.com/es/title/80192098', '2017-05-02', 'Netflix', 4),
+('Breaking bad', 'Un profesor de química con cáncer terminal se asocia con un exalumno suyo para fabricar y vender metanfetamina a fin de que su familia no pase apuros económicos.', 'Vince Gilligan', 'https://www.netflix.com/es/title/70143836', '2008-01-20', 'Netflix', 5),
+('WestWorld', ' En el futurista parque temático conocido como Westworld, un grupo de androides-servidores se desvían de las secuencias programadas meticulosamente por los informáticos y adoptan un comportamiento anormal.', 'Jonathan Nolan, Lisa Joy', 'https://es.hboespana.com/series/westworld/23871b4b-99e0-42a0-8122-4254db35c073', '2016-10-02', 'HBO', 3),
+('El cuento de la criada', 'narra la vida distópica de Gilead, una sociedad totalitaria que antiguamente pertenecía a los Estados Unidos. Los desastres medioambientales y una baja tasa de natalidad provocan que en Gilead gobierne un régimen fundamentalista perverso que considera a las mujeres propiedad del estado.', 'Bruce Miller', 'https://es.hboespana.com/series/the-handmaids-tale/6575c701-6c3d-4b14-9d98-ba67e102dfa1', '2017-04-26', 'HBO', 3);
+
+
